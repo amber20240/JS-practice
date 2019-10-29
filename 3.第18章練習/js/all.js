@@ -1,0 +1,11 @@
+var cookie = 6;
+var myMoney = 60;
+var drink = 20;
+var fivecookiePrice = cookie*5;
+var fivecookiePriceAndDrink = (cookie*5)*5 + drink*4 +20;
+document.getElementById("cookiePriceId").textContent = cookie;
+document.getElementById("myMoneyId").textContent = myMoney;
+document.getElementById("fivePriceId").textContent = fivecookiePrice;
+document.getElementById("totalId").textContent = myMoney - fivecookiePrice;
+document.getElementById("drinkPriceId").textContent = drink;
+document.getElementById("twoPriceId").textContent = fivecookiePriceAndDrink;
