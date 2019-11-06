@@ -57,7 +57,7 @@ table {
 	background: url(../img/desktop.png) no-repeat;
 }
 .wrap .inner .box{
-	width: 650px;
+	width: 680px;
 	height: 200px;
 	background: rgba(0,0,0,.65);
 	color: yellow; 
@@ -72,5 +72,6 @@ table {
 .wrap .inner .box p{
     font-size: 22px;
     text-align: center;
-    margin: 15px;
+	margin-top: 15px;
+	margin-bottom: 15px;
 }
