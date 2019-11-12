@@ -40,3 +40,11 @@ for(var i=0;i<farmsLen;i++){
         break;
     }
 };
+//for迴圈的加總
+//印出全部農場的HORSE的數量
+var farmsHorseTotal =0;
+for(var i=0;i<farmsLen;i++){
+    farmsHorseTotal+=farms[i].horse;
+};
+var farmsHorseEl = document.querySelectorAll(".r");
+farmsHorseEl[0].textContent = farmsHorseTotal;
