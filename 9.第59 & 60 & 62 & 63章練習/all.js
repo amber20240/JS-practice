@@ -48,3 +48,16 @@ for(var i=0;i<farmsLen;i++){
 };
 var farmsHorseEl = document.querySelectorAll(".r");
 farmsHorseEl[0].textContent = farmsHorseTotal;
+//for迴圈 &break的應用
+//for迴圈要想到break;if要想到else
+//任務要找一家農場，買20隻的馬，並計算此農場剩下的數量
+for(var i=0;i<farmsLen;i++){
+    if(farms[i].horse>50){
+        var el= document.querySelectorAll(".y");
+        var farmsHorseTotal=farms[i].horse;
+        el[0].textContent="第"+i+"個農場有"+farms[i].horse+"隻馬";
+        farmsHorseTotal -=50;
+        el[1].textContent = "現在要在這個農場買50隻馬，扣掉買完的數量第"+i+"個農場剰"+farmsHorseTotal+"隻馬";
+        break;
+    }
+}
