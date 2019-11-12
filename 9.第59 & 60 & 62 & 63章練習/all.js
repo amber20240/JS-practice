@@ -31,3 +31,12 @@ for (var i=0;i<farmsLen;i++){
 var el=document.querySelectorAll(".w");
 el[i].textContent=farms[i].farmer;
 };
+//for迴圈的判斷
+//判斷馬超過50隻的農場，找到並停止
+for(var i=0;i<farmsLen;i++){
+    if(farms[i].horse>50){
+        var el =document.querySelectorAll(".l");
+        el[0].textContent = "第"+i+"個農場有"+farms[i].horse+"隻的馬";
+        break;
+    }
+};
