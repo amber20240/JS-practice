@@ -20,6 +20,15 @@
     <p>監聽到點擊，顯示出你已經點擊的字樣</p>
     <input type="button" value="點擊(2)" class="btn2">
     <p>請點擊 : 將會顯示 " <em id="text"></em> " </p>
+    <h2>綁定事件的語法差異(onclick / click)</h2>
+    <p>1.onclick綁定多個事件，只會觸發最後一個事件</p>
+    <input type="button" value="button3" class="btn3">
+    <p>綁定事件1，觸發結果 : <em id="text3"></em></p>
+    <p>綁定事件2，觸發結果 : <em id="text4"></em></p>
+    <p>2.addEventListener("click",function(){},false)綁定多個事件，全部都會觸發</p>
+    <input type="button" value="button4" class="btn4">
+    <p>觸發結果 : <em id="text5"></em></p>
+    <p>觸發結果 : <em id="text6"></em></p>
     <script src="all.js"></script>
 </body>
 </html>
