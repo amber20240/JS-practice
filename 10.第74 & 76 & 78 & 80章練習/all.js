@@ -31,3 +31,12 @@ for(var i=0;i<farmsLen;i++){
 ul2.innerHTML = str;
 var ul1Li =document.querySelector("#ul1 li a")
 ul1Li.setAttribute("class","ul3");
+//(三)creatElement
+//用creatElemet新增節點帶入撈出所有農夫的名子和養狗的數量
+
+var el = document.querySelector("#ul3");
+for(var i=0;i<farmsLen;i++){
+    var str = document.createElement("li");var str = document.createElement("li");
+    str.textContent = "農夫名子:"+farms[i].farmer+",養了"+farms[i].dogs+"隻狗";
+    el.appendChild(str);
+}
