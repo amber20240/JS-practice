@@ -78,5 +78,33 @@ function ul1(e){
   el13.textContent= e.target.nodeName;
 };
 el12.addEventListener("click",ul1,false);
+//(八)表單改變時觸發使用change
 
-
+var farms=[{
+  farmer: "cool",
+  year: "1990"
+},{
+  farmer:"good",
+  year: "1990"
+},{
+  farmer: "root",
+  year: "1991"
+},{
+  farmer: "bingo",
+  year: "1991"
+}
+];
+var el13 = document.querySelector("#selectListId");
+function selectList(e){
+  var selectValue = e.target.value;
+  var farmsLen =farms.length;
+  str="";
+  for(var i=0;i<farmsLen;i++){
+    if(selectValue == farms[i].year){
+        str +="<li>"+farms[i].farmer+"</li>"
+    };
+  }
+  console.log(str);
+  document.querySelector("#ul2").innerHTML = str;
+};
+el13.addEventListener("change",selectList,false);
