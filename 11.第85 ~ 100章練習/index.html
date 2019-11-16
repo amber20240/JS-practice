@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        #text{
+            color: blue;
+            font-size: 20px;
+        }
+        .box1{
+            background: yellow;
+            width: 100px;
+            height: 100px;
+            position: absolute;
+            left: 25%;
+            top: 20%;
+            text-align: center;
+            line-height: 100px;
+            color: black;
+        }
+        .box2{
+            background: blue;
+            width: 200px;
+            height: 200px;
+            position: relative;
+            text-align: center;
+            color: pink;
+        }
+        .box3{
+            width: 100px;
+            height: 100px;
+            background-color:blue;
+            position: absolute;
+            left:25%;
+            top: 20%;
+            text-align: center;
+            line-height: 100px;
+        }
+        .box4{
+            width: 200px;
+            height: 200px;
+            background-color:pink;
+            position: relative;
+            text-align: center; 
+        }
+        
+    </style>
+</head>
+<body class>
+    <h1>練習effect事件</h1>
+    <h2>(一)點擊按鈕，console.log出mouseEvent資訊</h2>
+    <input type="button" value="點擊(1)" class="btn">
+    <h2>(二)事件監聽</h2>
+    <p>監聽到點擊，顯示出你已經點擊的字樣</p>
+    <input type="button" value="點擊(2)" class="btn2">
+    <p>請點擊 : 將會顯示 " <em id="text"></em> " </p>
+    <h2>(三)綁定事件的語法差異(onclick / click)</h2>
+    <p>1.onclick綁定多個事件，只會觸發最後一個事件</p>
+    <input type="button" value="button3" class="btn3">
+    <p>綁定事件1，觸發結果 : <em id="text3"></em></p>
+    <p>綁定事件2，觸發結果 : <em id="text4"></em></p>
+    <p>2.addEventListener("click",function(){},false)綁定多個事件，全部都會觸發</p>
+    <input type="button" value="button4" class="btn4">
+    <p>觸發結果 : <em id="text5"></em></p>
+    <p>觸發結果 : <em id="text6"></em></p>
+    <h2>(四)Event bubbling / Event capturing </h2>
+    <p>1.Event bubbling </p>
+    <div class="box2">按鈕2
+        <div class="box1">按鈕1</div>
+    </div>
+    <p>我是按鈕 5 的觸發結果:會先出現按鈕 5 的alert<em id="tex7"></em></p>
+    <p>我是按鈕 6 的觸發結果:再出現按鈕 6 的請看alert<em id="text8"></em></p>
+    <p>2.Event capturing</p>
+    <div class="box4">按鈕4
+        <div class="box3">按鈕3</div>
+    </div>
+    <p>我是按鈕 7 的觸發結果:會先出現按鈕 8 的alert才出現按鈕 7 的alert<em id="tex11"></em></p>
+    <p>我是按鈕 8 的觸發結果:會先出現按鈕 8 的alert才出現按鈕 7 的alert<em id="text12"></em></p>
+    <script src="all.js"></script>
+</body>
+</html>
