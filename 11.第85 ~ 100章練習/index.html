@@ -63,6 +63,12 @@
             text-align:center;
             line-height: 100px;
         }
+        .ul1 ul{
+            width: 600px;
+            height: 100px;
+            border: 2px solid black;
+            padding: 50px;
+        }
     </style>
 </head>
 <body class>
@@ -103,6 +109,13 @@
     <p>我是按鈕 6 的觸發結果: 會顯示alert 按鈕 6， 但因為使用stopPropagation，按鈕 5 的alert不會跳出</p>
     <h2>(六)preventDeFault</h2>
     <a href="https://www.google.com.tw/" id="a1">連結1</a>
+    <h2>(七)e.target.nodeName + a 避免默認</h2>
+    <div class="ul1">
+        <ul>
+            <li><a href="#">測試e.target</a></li>
+        </ul>
+    </div>
+    <p>現在點到哪一個標籤 : "<em  id="text13"></em> "</p>
     <script src="all.js"></script>
 </body>
 </html>

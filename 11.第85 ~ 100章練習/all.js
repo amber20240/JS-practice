@@ -64,8 +64,19 @@ el10.addEventListener("click",button5,false);
 var el11= document.querySelector("#a1");
 function a1(e){
   e.preventDefault();
+  console.log(e.preventDefault());
   alert("使用preventDefault 不會跳轉其他頁面")
 };
 el11.addEventListener("click",a1,false);
+//(七) e.target.naodeName  + a 避免默認
+//因為a 連結href="#"，放#，會去尋找毛點
+var el12 =document.querySelector(".ul1");
+function ul1(e){
+  e.preventDefault();
+  console.log(e.target);
+  var el13=document.querySelector("#text13");
+  el13.textContent= e.target.nodeName;
+};
+el12.addEventListener("click",ul1,false);
 
 
