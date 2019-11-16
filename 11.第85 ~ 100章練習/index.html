@@ -6,7 +6,47 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
     <style>
-    
+        #text{
+            color: blue;
+            font-size: 20px;
+        }
+        .box1{
+            background: yellow;
+            width: 100px;
+            height: 100px;
+            position: absolute;
+            left: 25%;
+            top: 20%;
+            text-align: center;
+            line-height: 100px;
+            color: black;
+        }
+        .box2{
+            background: blue;
+            width: 200px;
+            height: 200px;
+            position: relative;
+            text-align: center;
+            color: pink;
+        }
+        .box3{
+            width: 100px;
+            height: 100px;
+            background-color:blue;
+            position: absolute;
+            left:25%;
+            top: 20%;
+            text-align: center;
+            line-height: 100px;
+        }
+        .box4{
+            width: 200px;
+            height: 200px;
+            background-color:pink;
+            position: relative;
+            text-align: center; 
+        }
+        
     </style>
 </head>
 <body class>
@@ -26,6 +66,19 @@
     <input type="button" value="button4" class="btn4">
     <p>觸發結果 : <em id="text5"></em></p>
     <p>觸發結果 : <em id="text6"></em></p>
+    <h2>(四)Event bubbling / Event capturing </h2>
+    <p>1.Event bubbling </p>
+    <div class="box2">按鈕2
+        <div class="box1">按鈕1</div>
+    </div>
+    <p>我是按鈕 5 的觸發結果:會先出現按鈕 5 的alert<em id="tex7"></em></p>
+    <p>我是按鈕 6 的觸發結果:再出現按鈕 6 的請看alert<em id="text8"></em></p>
+    <p>2.Event capturing</p>
+    <div class="box4">按鈕4
+        <div class="box3">按鈕3</div>
+    </div>
+    <p>我是按鈕 7 的觸發結果:再出現按鈕 7 的請看alert<em id="tex11"></em></p>
+    <p>我是按鈕 8 的觸發結果:會先出現按鈕 8 的alert<em id="text12"></em></p>
     <script src="all.js"></script>
 </body>
 </html>

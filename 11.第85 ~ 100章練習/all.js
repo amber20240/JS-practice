@@ -30,3 +30,20 @@ el4.addEventListener("click",function(){
     var text6=document.querySelector("#text6");
     text6.textContent ="2" ;
  },false);
+ //(四)Event Bubbling / Event capturing
+ var el5 = document.querySelector(".box1");
+ var el6 = document.querySelector(".box2");
+ el5.addEventListener("click",function(){
+  alert("觸發按鈕5")
+ },false);
+ el6.addEventListener("click",function(){
+   alert("觸發按鈕6")
+ },false);
+ var el7=document.querySelector(".box3");
+ var el8 =document.querySelector(".box4");
+ el7.addEventListener("click",function(){
+    alert("觸發按鈕7")
+ },true);
+ el8.addEventListener("click",function(){
+    alert("觸發按鈕8")
+ },true);
