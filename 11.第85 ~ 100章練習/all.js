@@ -47,3 +47,25 @@ el4.addEventListener("click",function(){
  el8.addEventListener("click",function(){
     alert("觸發按鈕8")
  },true);
+//(五)stopPropagation / preventDeault
+//1.stopPropagation
+var el9 = document.querySelector(".box6");
+var el10 = document.querySelector(".box5");
+function button6(e){
+  e.stopPropagation();
+  alert("點選到button6")
+};
+function button5(){
+  alert("點選到button5")
+};
+el9.addEventListener("click",button6,false);
+el10.addEventListener("click",button5,false);
+//2.preventDeault
+var el11= document.querySelector("#a1");
+function a1(e){
+  e.preventDefault();
+  alert("使用preventDefault 不會跳轉其他頁面")
+};
+el11.addEventListener("click",a1,false);
+
+

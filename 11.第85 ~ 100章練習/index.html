@@ -46,7 +46,23 @@
             position: relative;
             text-align: center; 
         }
-        
+        .box5{
+            width: 200px;
+            height: 200px;
+            background-color: blue;
+            position: relative;
+            text-align: center;
+        }
+        .box6{
+            width: 100px;
+            height: 100px;
+            background-color: pink;
+            position: absolute;
+            left : 25%;
+            top: 20%;
+            text-align:center;
+            line-height: 100px;
+        }
     </style>
 </head>
 <body class>
@@ -79,6 +95,14 @@
     </div>
     <p>我是按鈕 7 的觸發結果:再出現按鈕 7 的請看alert<em id="tex11"></em></p>
     <p>我是按鈕 8 的觸發結果:會先出現按鈕 8 的alert<em id="text12"></em></p>
+    <h2>(五)stopProgation / preventDefault</h2>
+    <p>1.stopPropagation </p>
+    <div class="box5">按鈕5
+        <div class="box6">按鈕6</div>
+    </div>
+    <p>我是按鈕 6 的觸發結果: 會顯示alert 按鈕 6， 但因為使用stopPropagation，按鈕 5 的alert不會跳出</p>
+    <h2>(六)preventDeFault</h2>
+    <a href="https://www.google.com.tw/" id="a1">連結1</a>
     <script src="all.js"></script>
 </body>
 </html>
