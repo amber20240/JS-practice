@@ -116,12 +116,23 @@
         </ul>
     </div>
     <p>現在點到哪一個標籤 : "<em  id="text13"></em> "</p>
-    <h2>(八)change</h2>
+    <h2>(八)表單改變時觸發使用change - innerHtml</h2>
+    <p>比對選擇的內容，並印出for迴圈的內容，可用innerHTML</p>
+    <label for="selectListId">比對出生年</label>
     <select id="selectListId">
         <option value="1990">1990</option>
         <option value="1991">1991</option>
     </select>
     <ul id="ul2"></ul>
+    <h2>(九)表單改變時觸發使用change - createElement(不可用)</h2>
+    <p>比對選擇的內容，並印出for迴圈的內容，" 不可用 "creatElement</p>
+    <p>因為createElement不會清空原本的內容</p>
+    <label for="s1">年齡</label>
+    <select id="s1">
+        <option value="1990">1990</option>
+        <option value="1991">1991</option>
+    </select>
+    <ul id="ul3"></ul>
     <script src="all.js"></script>
 </body>
 </html>

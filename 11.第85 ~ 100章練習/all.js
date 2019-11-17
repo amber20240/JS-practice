@@ -78,8 +78,8 @@ function ul1(e){
   el13.textContent= e.target.nodeName;
 };
 el12.addEventListener("click",ul1,false);
-//(八)表單改變時觸發使用change
-
+//(八)表單改變時觸發使用change - innerHtml
+//比對選擇的內容，並印出for迴圈的內容，可用innerHTML
 var farms=[{
   farmer: "cool",
   year: "1990"
@@ -108,3 +108,19 @@ function selectList(e){
   document.querySelector("#ul2").innerHTML = str;
 };
 el13.addEventListener("change",selectList,false);
+//(九)表單改變時觸發使用change - createElement(不可用)
+//比對選擇的內容，並印出for迴圈的內容，" 不可用 "creatElement
+//因為createElement不會清空原本的內容</p>
+var el15=document.querySelector("#s1");
+var el16=document.querySelector("#ul3");
+function select2(e){
+  for (var i=0;i<farms.length;i++){
+    var sv = e.target.value;
+    if(sv == farms[i].year){
+      var str =document.createElement("li");
+      str.textContent = farms[i].farmer;
+      el16.appendChild(str);
+    }
+  }
+}
+el15.addEventListener("change",select2,false);
