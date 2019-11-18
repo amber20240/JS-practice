@@ -46,11 +46,6 @@ table {
 	border-collapse: collapse;
 	border-spacing: 0;
 }
-
-html{
-    height: 100%;
-    
-}
 html{
   height: 100%;
 }
@@ -58,6 +53,7 @@ html{
   width: 100%;
   height: 1000px;
   background: url(../img/dark.png) no-repeat bottom #404747;
+  cursor: none;
 }
 .header{
   background-color: green;
@@ -74,4 +70,7 @@ html{
 }
 .header p span{
   color: yellow;
+}
+#imgId{
+  position: fixed;
 }
