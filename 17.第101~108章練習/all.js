@@ -118,6 +118,8 @@ function updateList(item){
 function del(e){
     e.preventDefault();
     var num=e.target.dataset.num;
+    var nodeName=e.target.nodeName;
+    if(nodeName !== "A"){return};
     data.splice(num,1);
     localStorage.setItem("farmerTodo",JSON.stringify(data));
     updateList(data);
