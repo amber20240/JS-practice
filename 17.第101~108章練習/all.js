@@ -91,14 +91,35 @@ function spliceList(e){
 };
 el7.addEventListener("click",spliceList,false);
 //(五)作業
-var ul5=document.querySelector("#ul6");
-var el8=document.querySelector("#btn5");
-var str="";
-function btn12(e){
-    var el31=document.querySelector("#text2").value;
-    var g=document.querySelector("#text2").value
-    str +='<li>'+el31+'</li>'
-    ul5.innerHTML=str;
+//目標＝填入文字，印出文字，在做刪除
+//先做出填入東西後可印出東西，再來做刪除
+var sendBtn=document.querySelector("#sendBtn");
+var ulList=document.querySelector("#ul6");
+var data = JSON.parse(localStorage.getItem("farmerTodo")) || []; 
+updateList(data);
+function sendList(){
+    var todo=document.querySelector(".text2").value;
+    var text={
+        content: todo
+    };
+    data.push(text);
+    updateList(data);
+    localStorage.setItem("farmerTodo",JSON.stringify(data));
 };
-el8.addEventListener("click",btn12,false);
+sendBtn.addEventListener("click",sendList,false);
+function updateList(item){
+    var str="";
+    for(var i=0;i<item.length;i++){
+    str +='<li><a href="#" data-num="'+i+'">刪除</a>'+item[i].content+'</li>';
+    };
+    ulList.innerHTML=str;
+};
 
+function del(e){
+    e.preventDefault();
+    var num=e.target.dataset.num;
+    data.splice(num,1);
+    localStorage.setItem("farmerTodo",JSON.stringify(data));
+    updateList(data);
+};
+ulList.addEventListener("click",del,false)
