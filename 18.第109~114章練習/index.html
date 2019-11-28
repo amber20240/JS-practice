@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        #a1{
+            border: 2px solid #0000ff;
+            text-decoration: none;
+            padding: 5px;
+        }
+        .body{
+            background:url(dog.png) no-repeat;
+        }
+    </style>
+</head>
+<body>
+    <h1>瀏覽器功能探索 - 第一頁</h1>
+    <h2>跳至下一頁/回上一頁</h2>
+    <input type="button" class="btnForward" value="下一頁">
+    <input type="button" class="btnNextPageJS" value="下一頁-JS">
+    <h2> 顯示目前網址/列印</h2>
+    <input type="button" class="btnLocation" value="目前位置">
+    <p>位置：<em id="em1"></em></p>
+    <input type="button" class="btnPrint" value="列印">
+    <h2>自適應視窗大小</h2>
+    <img src="dog.png" class="img">
+
+    <script>
+        document.querySelector(".btnForward").onclick=function(){
+            window.location.href="page2.html";
+        };
+        document.querySelector(".btnNextPageJS").onclick=function(){
+            window.history.forward();
+        };
+        document.querySelector(".btnLocation").onclick=function(){
+            var text =document.querySelector("#em1");
+            text.textContent=window.location;
+        };
+        document.querySelector(".btnPrint").onclick=function(){
+             window.print();
+        };
+        document.querySelector(".img").style.width=window.innerWidth+"px";
+        document.querySelector(".img").style.height=window.innerHeight+"px";
+        window.onresize=function(){
+            document.querySelector(".img").style.width = window.innerWidth+"px";
+            document.querySelector(".img").style.height = window.innerHeight+"px";
+        };
+    </script>
+</body>
+</html>
